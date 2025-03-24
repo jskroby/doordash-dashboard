@@ -112,3 +112,16 @@ git remote set-url origin https://<your-username>:<your-token>@github.com/<your-
 git push origin main
 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
 git remote set-url origin https://jskroby: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@github.com/jskroby/doordash-dashboard.git
+git add .
+git commit -m "Fix: deploy config and firebase.json location"
+git push origin main
+git pull origin main --rebase
+git push origin main
+git add .
+git rebase --continue
+git push origin main
+git remote set-url origin https://<USERNAME>:<GITHUB_PAT>@github.com/<USERNAME>/<REPO>.git
+git remote set-url origin https://jskroby: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@github.com/jskroby/doordash-dashboard.git
+PACKAGE_NAME=express && open "https://www.npmjs.com/package/$PACKAGE_NAME"
+PACKAGE_NAME=express && xdg-open "https://www.npmjs.com/package/$PACKAGE_NAME"
+PACKAGE_NAME=express && echo "https://www.npmjs.com/package/$PACKAGE_NAME"
