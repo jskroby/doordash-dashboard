@@ -1,0 +1,35 @@
+/* static/style.css */
+body {
+    background-color: #e0e0e0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #e0e0e0;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 
+        10px 10px 20px #bebebe,
+        -10px -10px 20px #ffffff;
+}
+
+button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 
+        5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 
+        inset 5px 5px 10px #bebebe,
+        inset -5px -5px 10px #ffffff;
+}

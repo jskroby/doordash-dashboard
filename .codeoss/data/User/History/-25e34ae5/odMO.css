@@ -1,0 +1,6 @@
+4. Run the app via `python app.py`
+
+## Usage
+1. Go to `http://127.0.0.1:5000/` in your browser.
+2. Click login, and log in with your google credentials.
+3. Click "Place Order" to place an order. This will pull four random food items from our mock `gmail_reader.py` file and mock an order via our `doordash_api.py` file.

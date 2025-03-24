@@ -1,0 +1,70 @@
+2025-03-23 03:19:38.398 [info] Extension host with pid 1284 started
+2025-03-23 03:19:38.419 [info] Lock '/home/carpathianwolfjoseph/.codeoss/data/User/workspaceStorage/5f60c524/vscode.lock': Lock acquired.
+2025-03-23 03:19:38.645 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-23 03:19:38.647 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-23 03:19:38.647 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-23 03:19:38.647 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-23 03:19:39.218 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-23 03:19:39.401 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-23 03:19:39.401 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-23 03:19:39.813 [info] Eager extensions activated
+2025-03-23 03:19:39.814 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-03-23 03:19:39.814 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onStartupFinished'
+2025-03-23 03:19:39.814 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2025-03-23 03:19:39.815 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-23 03:19:39.815 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-23 03:19:43.499 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2025-03-23 03:21:37.309 [info] ExtensionService#_doActivateExtension RooVeterinaryInc.roo-cline, startup: false, activationEvent: 'onLanguage'
+2025-03-23 03:21:54.979 [info] ExtensionService#_doActivateExtension Codium.codium, startup: false, activationEvent: 'onStartupFinished'
+2025-03-23 03:21:57.267 [info] ExtensionService#_doActivateExtension dbcode.dbcode, startup: false, activationEvent: 'onView:dbcode.connections.view'
+2025-03-23 03:21:59.910 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-03-23 03:22:00.891 [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+2025-03-23 03:22:30.697 [info] ExtensionService#_doActivateExtension robertpiosik.gemini-coder, startup: false, activationEvent: 'onView:geminiCoderViewOpenEditors'
+2025-03-23 03:26:05.344 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python'
+2025-03-23 03:26:05.861 [error] Error: spawn /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python-env-tools/bin/pet ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-03-23 03:26:26.717 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model15)
+2025-03-23 03:26:51.365 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2025-03-23 03:27:01.823 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model19)
+2025-03-23 03:27:36.878 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2025-03-23 03:27:44.039 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model22)
+2025-03-23 03:27:58.537 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model25)
+2025-03-23 03:28:39.404 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model30)
+2025-03-23 03:28:41.401 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model29)
+2025-03-23 03:28:44.706 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model28)
+2025-03-23 03:28:47.403 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model27)
+2025-03-23 03:28:49.885 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model26)
+2025-03-23 03:31:04.471 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model38)
+2025-03-23 03:31:33.408 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model41)
+2025-03-23 03:31:59.119 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model43)
+2025-03-23 03:32:11.816 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model44)
+2025-03-23 03:32:12.420 [error] [ms-python.python] provider FAILED
+2025-03-23 03:32:12.421 [error] Error: FileNotFoundError: [Errno 2] No such file or directory: '/home/carpathianwolfjoseph/Untitled-2'
+    at ae (/google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/out/client/extension.js:2:2049071)
+    at oe (/google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/out/client/extension.js:2:2047031)
+    at Immediate.<anonymous> (/google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/out/client/extension.js:2:2043325)
+    at processImmediate (node:internal/timers:483:21)
+2025-03-23 03:32:16.301 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model47)
+2025-03-23 03:36:14.377 [info] ExtensionService#_doActivateExtension vscode.debug-server-ready, startup: false, activationEvent: 'onDebugResolve'
+2025-03-23 03:40:40.566 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model55)
+2025-03-23 03:40:45.181 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model58)
+2025-03-23 03:41:06.756 [warning] RooVeterinaryInc.roo-cline - Code actions of kind 'quickfix' requested but returned code action is of kind 'refactor.rewrite'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2025-03-23 03:41:06.756 [warning] RooVeterinaryInc.roo-cline - Code actions of kind 'quickfix' requested but returned code action is of kind 'refactor.rewrite'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2025-03-23 03:41:06.767 [warning] RooVeterinaryInc.roo-cline - Code actions of kind 'quickfix' requested but returned code action is of kind 'refactor.rewrite'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2025-03-23 03:41:06.767 [warning] RooVeterinaryInc.roo-cline - Code actions of kind 'quickfix' requested but returned code action is of kind 'refactor.rewrite'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2025-03-23 03:41:22.029 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model59)
+2025-03-23 03:41:33.515 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model62)
+2025-03-23 03:42:01.937 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model65)
+2025-03-23 03:43:20.409 [info] ExtensionService#_doActivateExtension vscode.simple-browser, startup: false, activationEvent: 'onOpenExternalUri:https'
+2025-03-23 03:54:45.655 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-23 03:54:45.658 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2025-03-23 03:57:42.584 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model70)
+2025-03-23 03:58:20.537 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model72)
+2025-03-23 04:06:00.919 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model78)
+2025-03-23 04:06:51.356 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:5,$model82)
+2025-03-23 04:07:21.063 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model83)
+2025-03-23 04:07:47.846 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model84)
+2025-03-23 04:08:08.421 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model86)
+2025-03-23 04:08:23.154 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:3,$model88)

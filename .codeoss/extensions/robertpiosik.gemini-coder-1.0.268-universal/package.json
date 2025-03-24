@@ -1,0 +1,672 @@
+{
+	"name": "gemini-coder",
+	"displayName": "Gemini Coder",
+	"description": "Copy context for chatbots or initialize them hands-free! Use the free Gemini API for FIM completions, file refactoring and applying changes.",
+	"version": "1.0.268",
+	"scripts": {
+		"build": "npx vsce package --no-dependencies",
+		"vscode:prepublish": "npm run compile",
+		"compile": "webpack --config ./webpack.config.js"
+	},
+	"publisher": "robertpiosik",
+	"homepage": "https://gemini-coder.netlify.app/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/robertpiosik/gemini-coder"
+	},
+	"engines": {
+		"vscode": "^1.92.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Machine Learning",
+		"AI",
+		"Chat"
+	],
+	"keywords": [
+		"ai",
+		"autocomplete",
+		"refactoring",
+		"assistant",
+		"fim",
+		"chat",
+		"free",
+		"AI Studio",
+		"Gemini",
+		"ChatGPT",
+		"Claude",
+		"DeepSeek",
+		"Grok",
+		"Mistral",
+		"HuggingChat",
+		"openai",
+		"typescript",
+		"javascript",
+		"go",
+		"golang",
+		"json",
+		"php",
+		"ruby",
+		"kotlin",
+		"tools",
+		"c++",
+		"c#"
+	],
+	"main": "out/extension.js",
+	"activationEvents": [],
+	"capabilities": {
+		"virtualWorkspaces": true,
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"icon": "media/logo.png",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "geminiCoder",
+					"title": "Gemini Coder",
+					"icon": "resources/activity-bar-icon.svg"
+				}
+			]
+		},
+		"views": {
+			"geminiCoder": [
+				{
+					"id": "geminiCoderViewOpenEditors",
+					"name": "Open Editors"
+				},
+				{
+					"id": "geminiCoderViewWorkspace",
+					"name": "Workspace"
+				},
+				{
+					"id": "geminiCoderViewWebsites",
+					"name": "Websites"
+				},
+				{
+					"id": "geminiCoderViewChat",
+					"name": "Chat",
+					"type": "webview"
+				},
+				{
+					"id": "geminiCoderViewApi",
+					"name": "API",
+					"type": "webview"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "geminiCoder.copyContext",
+				"title": "Copy Context",
+				"category": "Gemini Coder",
+				"icon": "$(copy)"
+			},
+			{
+				"command": "geminiCoder.selectSavedContext",
+				"title": "Select Saved Context",
+				"category": "Gemini Coder",
+				"icon": "$(checklist)"
+			},
+			{
+				"command": "geminiCoder.checkAll",
+				"title": "Check All",
+				"category": "Gemini Coder",
+				"icon": "$(check-all)"
+			},
+			{
+				"command": "geminiCoder.clearChecks",
+				"title": "Clear All Checks",
+				"category": "Gemini Coder",
+				"icon": "$(clear-all)"
+			},
+			{
+				"command": "geminiCoder.collapseFolders",
+				"title": "Collapse Folders",
+				"category": "Gemini Coder",
+				"icon": "$(collapse-all)"
+			},
+			{
+				"command": "geminiCoder.checkAllOpenEditors",
+				"title": "Check All",
+				"category": "Gemini Coder",
+				"icon": "$(check-all)"
+			},
+			{
+				"command": "geminiCoder.clearChecksOpenEditors",
+				"title": "Clear All Checks",
+				"category": "Gemini Coder",
+				"icon": "$(clear-all)"
+			},
+			{
+				"command": "geminiCoder.closeEditor",
+				"title": "Close Editor",
+				"category": "Gemini Coder",
+				"icon": "$(close)"
+			},
+			{
+				"command": "geminiCoder.closeAllEditors",
+				"title": "Close All Editors",
+				"category": "Gemini Coder",
+				"icon": "$(close-all)"
+			},
+			{
+				"command": "geminiCoder.saveAll",
+				"title": "Save All",
+				"category": "Gemini Coder",
+				"icon": "$(save-all)"
+			},
+			{
+				"command": "geminiCoder.fimCompletionWith",
+				"title": "FIM Completion with...",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimCompletion",
+				"title": "FIM Completion",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimCompletionWithSuggestions",
+				"title": "FIM Completion with Suggestions",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimCompletionWithSuggestionsWith",
+				"title": "FIM Completion with Suggestions with...",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimCompletionToClipboard",
+				"title": "FIM Completion to Clipboard",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimCompletionWithSuggestionsToClipboard",
+				"title": "FIM Completion with Suggestions to Clipboard",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimInChat",
+				"title": "FIM in Chat",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.fimInChatWith",
+				"title": "FIM in Chat with...",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.changeDefaultFimModel",
+				"title": "Change Default FIM Model",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.changeDefaultRefactoringModel",
+				"title": "Change Default Refactoring Model",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.changeDefaultApplyChangesModel",
+				"title": "Change Default Apply Changes Model",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.applyChanges",
+				"title": "Apply Changes",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.applyChangesWith",
+				"title": "Apply Changes with...",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.webChat",
+				"title": "Web Chat",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.webChatWith",
+				"title": "Web Chat with...",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.chatToClipboard",
+				"title": "Chat to Clipboard",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.refactor",
+				"title": "Refactor this File",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.refactorWith",
+				"title": "Refactor this File with...",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.refactorToClipboard",
+				"title": "Refactor to Clipboard",
+				"category": "Gemini Coder"
+			},
+			{
+				"command": "geminiCoder.newFolder",
+				"title": "New Folder..."
+			},
+			{
+				"command": "geminiCoder.newFile",
+				"title": "New File..."
+			},
+			{
+				"command": "geminiCoder.rename",
+				"title": "Rename..."
+			},
+			{
+				"command": "geminiCoder.previewWebsite",
+				"title": "Preview Website Content"
+			},
+			{
+				"command": "geminiCoder.delete",
+				"title": "Delete"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "geminiCoder.copyContext",
+					"when": "view == geminiCoderViewWorkspace",
+					"group": "navigation@1"
+				},
+				{
+					"command": "geminiCoder.selectSavedContext",
+					"when": "view == geminiCoderViewWorkspace",
+					"group": "navigation@2"
+				},
+				{
+					"command": "geminiCoder.checkAll",
+					"when": "view == geminiCoderViewWorkspace",
+					"group": "navigation@3"
+				},
+				{
+					"command": "geminiCoder.clearChecks",
+					"when": "view == geminiCoderViewWorkspace",
+					"group": "navigation@4"
+				},
+				{
+					"command": "geminiCoder.collapseFolders",
+					"when": "view == geminiCoderViewWorkspace",
+					"group": "navigation@5"
+				},
+				{
+					"command": "geminiCoder.checkAllOpenEditors",
+					"when": "view == geminiCoderViewOpenEditors",
+					"group": "navigation@1"
+				},
+				{
+					"command": "geminiCoder.clearChecksOpenEditors",
+					"when": "view == geminiCoderViewOpenEditors",
+					"group": "navigation@2"
+				},
+				{
+					"command": "geminiCoder.saveAll",
+					"when": "view == geminiCoderViewOpenEditors",
+					"group": "navigation@3"
+				},
+				{
+					"command": "geminiCoder.closeAllEditors",
+					"when": "view == geminiCoderViewOpenEditors",
+					"group": "navigation@4"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "geminiCoder.closeEditor",
+					"when": "view == geminiCoderViewOpenEditors && viewItem == openEditor",
+					"group": "inline"
+				},
+				{
+					"command": "geminiCoder.rename",
+					"when": "view == geminiCoderViewOpenEditors && viewItem == openEditor",
+					"group": "1_modification@1"
+				},
+				{
+					"command": "geminiCoder.delete",
+					"when": "view == geminiCoderViewOpenEditors && viewItem == openEditor",
+					"group": "1_modification@2"
+				},
+				{
+					"command": "geminiCoder.newFile",
+					"when": "view == geminiCoderViewWorkspace && !viewItem",
+					"group": "1_creation@1"
+				},
+				{
+					"command": "geminiCoder.newFolder",
+					"when": "view == geminiCoderViewWorkspace && !viewItem",
+					"group": "1_creation@2"
+				},
+				{
+					"command": "geminiCoder.rename",
+					"when": "view == geminiCoderViewWorkspace && !viewItem",
+					"group": "1_modification@1"
+				},
+				{
+					"command": "geminiCoder.rename",
+					"when": "view == geminiCoderViewWorkspace && viewItem == directory",
+					"group": "1_modification@1"
+				},
+				{
+					"command": "geminiCoder.delete",
+					"when": "view == geminiCoderViewWorkspace && !viewItem",
+					"group": "1_modification@2"
+				},
+				{
+					"command": "geminiCoder.delete",
+					"when": "view == geminiCoderViewWorkspace && viewItem == directory",
+					"group": "1_modification@2"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Gemini Coder Settings",
+			"properties": {
+				"geminiCoder.apiKey": {
+					"type": "string",
+					"scope": "resource",
+					"markdownDescription": "Create yours in [AI Studio](https://aistudio.google.com/app/apikey).",
+					"default": ""
+				},
+				"geminiCoder.temperature": {
+					"type": "number",
+					"scope": "resource",
+					"description": "Temperature to use with built-in Gemini models for FIM completions and file refactor/apply changes commands.",
+					"default": 0.2
+				},
+				"geminiCoder.providers": {
+					"type": "array",
+					"default": [],
+					"description": "Configure additional models via OpenAI API compatible providers.",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "A friendly name for the provider."
+							},
+							"endpointUrl": {
+								"type": "string",
+								"description": "Endpoint URL."
+							},
+							"bearerToken": {
+								"type": "string",
+								"description": "API key."
+							},
+							"model": {
+								"type": "string",
+								"description": "Model name."
+							},
+							"temperature": {
+								"type": "number",
+								"description": "Temperature."
+							},
+							"systemInstructions": {
+								"type": "string",
+								"description": "The system instructions."
+							},
+							"instruction": {
+								"type": "string",
+								"description": "Custom Autocomplete instruction."
+							}
+						}
+					}
+				},
+				"geminiCoder.verbose": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable verbose logging."
+				},
+				"geminiCoder.attachOpenFiles": {
+					"type": "boolean",
+					"default": true,
+					"description": "Attach open files to the context."
+				},
+				"geminiCoder.ignoredExtensions": {
+					"type": "array",
+					"description": "List of file extensions to ignore in the context.",
+					"default": [
+						"svg"
+					],
+					"items": {
+						"type": "string",
+						"description": "File extension to ignore (without the dot)"
+					}
+				},
+				"geminiCoder.presets": {
+					"type": "array",
+					"default": [
+						{
+							"name": "AI Studio with Flash",
+							"chatbot": "AI Studio",
+							"promptPrefix": "",
+							"promptSuffix": "",
+							"model": "gemini-2.0-flash",
+							"temperature": 0.5,
+							"systemInstructions": "You're a helpful coding assistant. Whenever proposing a file use the file block syntax.\nFiles must be represented as code blocks with their `name` in the header.\nExample of a code block with a file name in the header:\n```typescript name=filename.ts\ncontents of file\n```"
+						},
+						{
+							"name": "AI Studio with Flash Thinking Exp",
+							"chatbot": "AI Studio",
+							"promptPrefix": "",
+							"promptSuffix": "",
+							"model": "gemini-2.0-flash-thinking-exp-01-21",
+							"temperature": 0.5,
+							"systemInstructions": "You're a helpful coding assistant. Whenever proposing a file use the file block syntax.\nFiles must be represented as code blocks with their `name` in the header.\nExample of a code block with a file name in the header:\n```typescript name=filename.ts\ncontents of file\n```"
+						},
+						{
+							"name": "AI Studio with Pro Exp",
+							"chatbot": "AI Studio",
+							"promptPrefix": "",
+							"promptSuffix": "",
+							"model": "gemini-2.0-pro-exp-02-05",
+							"temperature": 0.5,
+							"systemInstructions": "You're a helpful coding assistant. Whenever proposing a file use the file block syntax.\nFiles must be represented as code blocks with their `name` in the header.\nExample of a code block with a file name in the header:\n```typescript name=filename.ts\ncontents of file\n```"
+						},
+						{
+							"name": "Gemini",
+							"chatbot": "Gemini",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "Gemini with canvas",
+							"chatbot": "Gemini",
+							"promptPrefix": "",
+							"promptSuffix": "",
+							"options": [
+								"canvas"
+							]
+						},
+						{
+							"name": "ChatGPT",
+							"chatbot": "ChatGPT",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "Claude",
+							"chatbot": "Claude",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "GitHub Copilot",
+							"chatbot": "GitHub Copilot",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "Grok",
+							"chatbot": "Grok",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "DeepSeek",
+							"chatbot": "DeepSeek",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "Mistral",
+							"chatbot": "Mistral",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						},
+						{
+							"name": "Open WebUI",
+							"chatbot": "Open WebUI",
+							"promptPrefix": "",
+							"promptSuffix": ""
+						}
+					],
+					"description": "Preset is a general or task specific web chat configuration.",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "Name of the preset."
+							},
+							"chatbot": {
+								"type": "string",
+								"enum": [
+									"AI Studio",
+									"Gemini",
+									"ChatGPT",
+									"Claude",
+									"GitHub Copilot",
+									"Grok",
+									"DeepSeek",
+									"Mistral",
+									"HuggingChat",
+									"Open WebUI"
+								],
+								"description": "Choose among supported chatbots."
+							},
+							"promptPrefix": {
+								"type": "string",
+								"examples": [
+									"Outline the steps needed to achieve:",
+									"Draft a roadmap for accomplishing:",
+									"Propose various approaches for addressing:",
+									"Identify potential challenges in developing:",
+									"Describe the purpose of this code:",
+									"I need assistance troubleshooting this issue:",
+									"Help diagnose this error:",
+									"Generate commit message based on changes:",
+									"Write tests for:"
+								],
+								"description": "Prefix prepended to all prompts sent with this chat."
+							},
+							"promptSuffix": {
+								"type": "string",
+								"examples": [
+									"Keep your response concise.",
+									"Think step by step.",
+									"Show only changed fragments.",
+									"Summarize your understanding of the problem.",
+									"Highlight what needs to change.",
+									"Detail the key considerations.",
+									"Suggest any alternative approaches.",
+									"Identify potential drawbacks.",
+									"Ask for clarifications if needed before proceeding."
+								],
+								"description": "Suffix appended to all prompts sent with this chat"
+							},
+							"model": {
+								"type": "string",
+								"description": "Model to use."
+							},
+							"options": {
+								"type": "array",
+								"description": "Options to enable, e.g. canvas.",
+								"items": {
+									"type": "string",
+									"description": "Option name."
+								}
+							},
+							"temperature": {
+								"type": "number",
+								"description": "Temperature to use."
+							},
+							"systemInstructions": {
+								"type": "string",
+								"description": "System instructions to use."
+							}
+						},
+						"required": [
+							"name",
+							"chatbot"
+						]
+					}
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"@babel/core": "^7.24.0",
+		"@babel/preset-env": "^7.24.0",
+		"@babel/preset-react": "^7.23.3",
+		"@babel/preset-typescript": "^7.23.3",
+		"@types/node": "20.x",
+		"@types/react": "^18.2.60",
+		"@types/react-dom": "^18.2.19",
+		"@types/vscode": "^1.92.0",
+		"@types/ws": "^8.5.14",
+		"babel-loader": "^9.1.3",
+		"clean-webpack-plugin": "^4.0.0",
+		"copy-webpack-plugin": "^12.0.2",
+		"css-loader": "^6.5.1",
+		"mini-css-extract-plugin": "^2.9.0",
+		"sass-embedded": "^1.86.0",
+		"sass-loader": "^12.4.0",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.5.1",
+		"typed-css-modules": "^0.9.1",
+		"typescript": "^5.7.2",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^6.0.1"
+	},
+	"dependencies": {
+		"@vscode/codicons": "^0.0.36",
+		"axios": "^1.7.7",
+		"bufferutil": "^4.0.9",
+		"classnames": "^2.5.1",
+		"ignore": "^6.0.2",
+		"marked": "^15.0.7",
+		"path-browserify": "^1.0.1",
+		"react": "^18.2.0",
+		"react-autosize-textarea": "^7.1.0",
+		"react-dom": "^18.2.0",
+		"ui": "workspace:*",
+		"utf-8-validate": "^6.0.5",
+		"ws": "^8.18.0"
+	},
+	"__metadata": {
+		"id": "c012efa9-e5f3-4026-9e50-25d7c4579b47",
+		"publisherId": "40d75f0f-fc99-482f-a14a-883af44031fd",
+		"publisherDisplayName": "robertpiosik",
+		"targetPlatform": "universal",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1742700088028,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}

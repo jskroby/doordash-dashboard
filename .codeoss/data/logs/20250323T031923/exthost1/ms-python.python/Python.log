@@ -1,0 +1,112 @@
+2025-03-23 03:26:06.145 [warning] Dir "/home/carpathianwolfjoseph/.pixi/envs" is not watchable (directory does not exist)
+2025-03-23 03:26:06.145 [info] Starting Environment refresh
+2025-03-23 03:26:06.145 [info] Searching for interpreters in posix paths locator
+2025-03-23 03:26:06.145 [info] Searching for pyenv environments
+2025-03-23 03:26:06.145 [info] Searching for conda environments
+2025-03-23 03:26:06.145 [info] Searching for global virtual environments
+2025-03-23 03:26:06.145 [info] Searching for custom virtual environments
+2025-03-23 03:26:06.145 [info] pyenv is not installed
+2025-03-23 03:26:06.145 [info] Finished searching for pyenv environments: 18 milliseconds
+2025-03-23 03:26:06.145 [info] Finished searching for custom virtual envs: 16 milliseconds
+2025-03-23 03:26:06.145 [info] > conda info --json
+2025-03-23 03:26:06.145 [info] > hatch env show --json
+2025-03-23 03:26:06.145 [info] cwd: .
+2025-03-23 03:26:06.145 [info] > pyenv which python
+2025-03-23 03:26:06.145 [info] cwd: .
+2025-03-23 03:26:06.145 [info] Finished searching for global virtual envs: 51 milliseconds
+2025-03-23 03:26:06.158 [info] Found: /bin/python --> /bin/python3.12
+2025-03-23 03:26:06.170 [info] Found: /bin/python3 --> /bin/python3.12
+2025-03-23 03:26:06.173 [info] Found: /bin/python3.12 --> /bin/python3.12
+2025-03-23 03:26:06.194 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2025-03-23 03:26:06.197 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2025-03-23 03:26:06.201 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2025-03-23 03:26:06.304 [info] Finished searching for interpreters in posix paths locator: 218 milliseconds
+2025-03-23 03:26:06.304 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-03-23 03:26:06.345 [info] > /usr/bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2025-03-23 03:26:06.345 [info] Environments refresh paths discovered (event): 268 milliseconds
+2025-03-23 03:26:06.345 [info] Environments refresh paths discovered: 268 milliseconds
+2025-03-23 03:26:06.403 [info] Environments refresh finished (event): 326 milliseconds
+2025-03-23 03:26:06.413 [info] Environment refresh took 336 milliseconds
+2025-03-23 03:26:06.419 [info] Python interpreter path: /bin/python
+2025-03-23 03:26:08.906 [info] Starting Jedi language server for carpathianwolfjoseph.
+2025-03-23 03:26:26.743 [info] Discover tests for workspace name: carpathianwolfjoseph - uri: /home/carpathianwolfjoseph/# app.py
+2025-03-23 03:31:33.448 [info] Discover tests for workspace name: carpathianwolfjoseph - uri: /home/carpathianwolfjoseph/# doordash_api.py
+2025-03-23 03:32:11.868 [info] Discover tests for workspace name: carpathianwolfjoseph - uri: /home/carpathianwolfjoseph/# gmail_reader.py
+2025-03-23 03:32:18.942 [info] Discover tests for workspace name: carpathianwolfjoseph - uri: /home/carpathianwolfjoseph/# gmail_reader.py
+2025-03-23 03:33:10.329 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/carpathianwolfjoseph/requirements.txt
+2025-03-23 03:33:10.329 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./requirements.txt
+2025-03-23 03:33:20.470 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py Untitled-2
+2025-03-23 03:33:20.470 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py Untitled-2
+2025-03-23 03:33:42.231 [info] Discover tests for workspace name: carpathianwolfjoseph - uri: /home/carpathianwolfjoseph/gmail_reader.py
+2025-03-23 03:43:00.790 [info] Send text to terminal: firebase login
+
+2025-03-23 03:45:17.093 [info] Send text to terminal: firebase init hosting
+
+2025-03-23 03:45:28.422 [info] Send text to terminal: firebase init hosting
+
+2025-03-23 03:45:44.690 [info] Send text to terminal: firebase init hosting
+
+2025-03-23 03:47:12.791 [info] Send text to terminal: python3 -m http.server 80
+
+2025-03-23 03:47:21.807 [info] Send text to terminal: python3 -m http.server 80
+
+2025-03-23 03:47:31.625 [info] Send text to terminal: python3 -m http.server 80
+
+2025-03-23 03:48:24.902 [info] Send text to terminal: npm install -g firebase-tools
+
+2025-03-23 03:53:02.965 [info] Send text to terminal: firebase login
+
+2025-03-23 03:53:25.398 [info] Send text to terminal: firebase init hosting
+
+2025-03-23 03:53:33.147 [info] Send text to terminal: firebase init hosting
+
+2025-03-23 03:54:50.904 [info] Send text to terminal: firebase deploy --only hosting
+
+2025-03-23 04:00:35.505 [info] Send text to terminal: firebase deploy --only hosting
+
+2025-03-23 04:09:38.226 [info] Send text to terminal: firebase deploy --only hosting
+
+2025-03-23 04:10:31.986 [info] Send text to terminal: firebase deploy --only hosting
+
+2025-03-23 04:10:40.780 [info] Send text to terminal: firebase deploy --only hosting
+
