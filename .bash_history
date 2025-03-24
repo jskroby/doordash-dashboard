@@ -90,3 +90,6 @@ cd ~
 mv public/.git .
 cd ~
 mv public/.git .
+git add .
+git commit -m "Move firebase.json to root and fix structure"
+git push origin main
