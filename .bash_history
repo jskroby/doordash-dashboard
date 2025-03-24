@@ -105,3 +105,10 @@ mv public/.git .
 cd public
 cd ~
 mv public/.git .
+git add .
+git commit -m "Move firebase.json to root and fix structure"
+git push origin main
+git remote set-url origin https://<your-username>:<your-token>@github.com/<your-username>/<your-repo>.git
+git push origin main
+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
+git remote set-url origin https://jskroby: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@github.com/jskroby/doordash-dashboard.git
